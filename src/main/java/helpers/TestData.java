@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class TestData {
     Random random = new Random();
-    private String testEmail = (random.nextInt(10000)) + "@ya.ru";
+    private String testEmail = (random.nextInt(10000)) + "@mailto.plus";
     private String testPassword = "p@ssword";
     private String testName = "yelloweye";
     private String mainPageURL = "https://stellarburgers.nomoreparties.site/";

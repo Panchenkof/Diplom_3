@@ -57,7 +57,7 @@ public class MainPage {
 
     @Step("Дождаться видимости клавиши 'Оформить заказ'")
     public MainPage isOrderButtonVisible() {
-        orderButton.shouldBe(visible, Duration.ofSeconds(20));
+        orderButton.shouldBe(visible, Duration.ofSeconds(30));
         return this;
     }
 

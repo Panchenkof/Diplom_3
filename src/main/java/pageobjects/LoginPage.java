@@ -46,7 +46,10 @@ public class LoginPage {
     public void doLoginButtonClick() {
         enterButton.click();
     }
-
+    @Step("Нажать клавишу входа с наведением")
+    public void doLoginHoverButtonClick() {
+        enterButton.hover().click();
+    }
     @Step("Нажать клавишу входа скриптом")
     public void doLoginButtonJSClick() {
         Actions builder = new Actions(enterButton.getWrappedDriver());

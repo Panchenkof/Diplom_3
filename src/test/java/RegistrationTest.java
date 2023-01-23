@@ -56,7 +56,7 @@ public class RegistrationTest {
         loginPage.isLoginHeaderVisible()
                 .doFillLoginFields(0, testData.getTestEmail())
                 .doFillLoginFields(1, testData.getTestPassword())
-                .doLoginButtonClick();
+                .doLoginHoverButtonClick();
 
         mainPage.isOrderButtonVisible();
         boolean expected = true;
