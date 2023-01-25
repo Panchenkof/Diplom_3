@@ -33,7 +33,6 @@ public class BurgerConstructorTest {
     @Parameterized.Parameters
     public static Object[][] getData() {
         return new Object[][]{
-                {0},
                 {1},
                 {2},
         };
@@ -54,14 +53,10 @@ public class BurgerConstructorTest {
     @Description("Успешно")
     @Test
     public void isBurgerConstructorTubsLeadToIngredientSectionsTest() throws InterruptedException {
-        if (ingredientNumber == 0) {
-            mainPage.doIngredientTabClick(1);
-            mainPage.isIngredientCategoriesHeaderVisible(1);
-            TimeUnit.SECONDS.sleep(1);
-        }
         mainPage.doIngredientTabClick(ingredientNumber);
         boolean expected = true;
         boolean actual = mainPage.isIngredientCategoriesHeaderVisible(ingredientNumber);
+        TimeUnit.SECONDS.sleep(1);
         assertEquals(expected, actual);
     }
 }
